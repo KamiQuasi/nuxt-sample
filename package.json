@@ -1,17 +1,18 @@
 {
-  "name": "nodejs-starter",
-  "version": "3.0.0",
-  "description": "Simple Node.js application",
-  "license": "EPL-2.0",
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "debug": "node --inspect=${DEBUG_PORT} server.js",
-    "test": "node test/test.js"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
-  "dependencies": {
-    "express": "^4.18.1",
-    "pino": "^8.5.0",
-    "pino-http": "^8.2.0",
-    "prom-client": "^14.1.0"
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "nuxt": "^3.8.0",
+    "vue": "^3.3.7",
+    "vue-router": "^4.2.5"
   }
 }
