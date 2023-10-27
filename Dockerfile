@@ -17,8 +17,9 @@ FROM registry.access.redhat.com/ubi9/nodejs-18-minimal:latest
 COPY --from=0 /opt/app-root/src/node_modules /opt/app-root/src/node_modules
 COPY . /opt/app-root/src
 
+RUN npm run build
+
 ENV NODE_ENV production
 ENV PORT 3000
 
-CMD ["npm", "run", "build"]
 CMD ["node", ".output/server/index.mjs"]
